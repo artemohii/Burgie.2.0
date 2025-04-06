@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="Burgie - Köstliche handgefertigte Burger in Berlin. Frische lokale Zutaten, einzigartiger Geschmack. Bestellen Sie online oder besuchen Sie uns vor Ort.">
+	<meta name="keywords" content="Burger, Berlin, Restaurant, Handgefertigt, Lokale Zutaten, Burgie, Bestellen">
+	<meta name="author" content="Burgie">
+	<meta property="og:title" content="Burgie - Handgefertigte Burger in Berlin">
+	<meta property="og:description" content="Entdecken Sie unsere köstlichen Burger, handgefertigt mit frischen, lokalen Zutaten.">
+	<title>Burgie.</title>
+	<link rel="stylesheet" href="style.css" />
+	<link rel="icon" type="image/x-icon" href="./favicon/favicon.ico">
+
+	<!-- <link rel="icon" type="image/png" href="./favicon/favicon-16x16.png"> -->
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
+
+<body id="body">
+	<div class="container">
+		<header class="header">
+			
+			<a href="#" class="header__logo">Burgie.</a>
+			<div class="header__burger">
+				<span id="icon-menu" onclick="navToggle()" class="material-icons _active">
+					menu
+				</span>
+			</div>
+			<nav id="nav" class="header-nav">
+				<ul class="header-nav__ul">
+					<li class="header-nav__li">
+						<a href="#standorte" class="header-nav__a ">Standorte</a>
+				
+					</li>
+					<li class="header-nav__li">
+						<a href="#menu" class="header-nav__a">Menü</a>
+					</li>
+					<li class="header-nav__li">
+						<a href="#about" class="header-nav__a">Über uns</a>
+					</li>
+					<li class="header-nav__li">
+						<a href="#feedback" class="header-nav__a">Feedback</a>
+					</li>
+					<li class="header-nav__li">
+						<a href="#kontakt" class="header-nav__a" >Kontakt</a>
+					</li>
+					<li class="header-nav__li">
+						<a href="https://wolt.com/en/deu/berlin/restaurant/burgie-berlin" class="header-nav__a _active" target="_blank">Jetzt Bestellen</a>
+					</li>
+				</ul>
+				<span id="icon-close" onclick="navToggle()" class="material-icons">
+					close
+				</span>
+			</nav>
+		</header>
+
+		
+		<section class="hero-section">
+			<div class="hero-section__container">
+				<div class="hero-section__text">
+					<h2>Willkommen bei Burgie</h2>
+					<p>Entdecken Sie unsere köstlichen Burger, handgefertigt mit frischen, lokalen Zutaten. Jeder Burger erzählt seine eigene Geschichte von Qualität und Geschmack.</p>
+				</div>
+				<div class="hero-section__image">
+					<div class="hero-image-part part4" style="background-image: url('../img/cutsmach/4.png')"></div>
+					<div class="hero-image-part part3" style="background-image: url('../img/cutsmach/3.png')"></div>
+					<div class="hero-image-part part2" style="background-image: url('../img/cutsmach/2.png')"></div>
+					<div class="hero-image-part part1" style="background-image: url('../img/cutsmach/1.png')"></div>
+				</div>
+			<!-- <style>
+				.hero-section__image {
+					cursor: default;
+					position: relative;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					height: 500px;
+					overflow: hidden;
+					transition: transform 0.3s ease;
+					transform: translateX(60px);
+					&:hover {
+						transform: translateX(60px) scale(1.2);
+					}
+				}
+
+				.hero-image-part {
+					position: absolute;
+					width: 100%;
+					height: 500px;
+					background-size: contain;
+					background-repeat: no-repeat;
+					background-position: center;
+					transform: translateY(-100vh);
+					animation: dropImage 1s ease forwards;
+				}
+
+				.part1 {
+					background-size: 120%;
+					animation-delay: 0s;
+					z-index: 1;
+						top: -60px;
+				}
+
+				.part2 {
+						background-size: 120%;
+
+					animation-delay: 0.2s; 
+					z-index: 1;
+					top: -50px;
+				}
+
+				.part3 {
+					background-size: 120%;
+
+					animation-delay: 0.4s;
+					z-index: 1;
+					top: -40px;
+				}
+
+				.part4 {
+					background-size: 120%;
+
+					animation-delay: 0.6s;
+					z-index: 1;
+					top: -30px;
+				}
+				
+
+				@keyframes dropImage {
+					from {
+						transform: translateY(-100vh);
+					}
+					to {
+						transform: translateY(0);
+					}
+				}
+
+				@media (max-width: 768px) {
+					.hero-section {
+    height: 100vh;
+  }
+  .hero-section__container {
+    flex-direction: column;
+    text-align: center;
+  margin: 70px auto 0;
+	padding-bottom: 0;
+  /* gap: 50px; */
+
+  }
+					.hero-section__image {
+						margin-bottom: -200px;
+						width: 100%;
+						/* height: 300px; */
+						transform: scale(0.8);
+						/* margin-left: -50px;  */
+					}
+
+					.hero-image-part {
+						/* height: 120px; */
+						transform: translateY(-100vh); /* Start offscreen */
+						opacity: 0;
+						position: absolute;
+						background-position: center;
+						background-size: contain;
+					}
+
+					.part1 {
+						top: -120px;
+						animation: mobileDropImage 0.5s ease forwards;
+					}
+
+					.part2 {
+						top: -120px;
+						animation: mobileDropImage 0.5s ease 0.2s forwards;
+					}
+
+					.part3 {
+						top: -120px;
+						animation: mobileDropImage 0.5s ease 0.4s forwards;
+					}
+
+					.part4 {
+						top: -120px;
+						animation: mobileDropImage 0.5s ease 0.6s forwards;
+					}
+
+					@keyframes mobileDropImage {
+						from {
+							opacity: 0;
+							transform: translateY(-50px);
+						}
+						to {
+							opacity: 1;
+							transform: translateY(0);
+						}
+					}
+				}
+			</style> -->
+			</div>
+		</section>
+		<!-- menu -->
+		<section class="menu-section" id="menu">
+			<div class="menu-section__container">
+				<h2 class="menu-section__title" data-aos="fade-up">Menü</h2>
+				<div class="menu-section__grid">
+					<div class="menu-item" data-aos="fade-up" data-aos-delay="100">
+						<div class="menu-item__image">
+							<img src="../img/Burgie Smash.png" alt="Burgie Smash">
+							
+						</div>
+						<h3 class="menu-item__title">Burgie Smash</h3>
+					</div>
+					<div class="menu-item" data-aos="fade-up" data-aos-delay="200">
+						<div class="menu-item__image">
+							<img src="../img/Burgie Double.png" alt="Burgie Double">
+						</div>
+						<h3 class="menu-item__title">Burgie Double</h3>
+					</div>
+					<div class="menu-item" data-aos="fade-up" data-aos-delay="300">
+						<div class="menu-item__image">
+							<img src="../img/Cheesy Burger.png" alt="Cheesy Burger">
+						</div>
+						<h3 class="menu-item__title">Cheesy Burger</h3>
+					</div>
+					<div class="menu-item" data-aos="fade-up" data-aos-delay="400">
+						<div class="menu-item__image">
+							<img src="../img/Chili Burger.png" alt="Chili Burger">
+						</div>
+						<h3 class="menu-item__title">Chili Burger</h3>
+					</div>
+					<div class="menu-item" data-aos="fade-up" data-aos-delay="500">
+						<div class="menu-item__image">
+							<img src="../img/Crispy Chick.png" alt="Crispy Chick">
+							<img src="../img/icons/vegan.png" alt="Vegan" style="position: absolute; width: 30px; height: 30px; bottom: 10px; right: 10px;">
+
+						</div>
+						<h3 class="menu-item__title">Crispy Chick</h3>
+					</div>
+					<div class="menu-item" data-aos="fade-up" data-aos-delay="600">
+						<div class="menu-item__image">
+							<img src="../img/Angry Chick.png" alt="Angry Chick">
+							<img src="../img/icons/vegan.png" alt="Vegan" style="position: absolute; width: 30px; height: 30px; bottom: 10px; right: 10px;">
+
+						</div>
+						<h3 class="menu-item__title">Angry Chick</h3>
+					</div>
+					<div class="menu-item" data-aos="fade-up" data-aos-delay="700">
+						<div class="menu-item__image">
+							<img src="../img/Beyond Smash.png" alt="Beyond Smash">
+							<img src="../img/icons/vegan.png" alt="Vegan" style="position: absolute; width: 30px; height: 30px; bottom: 10px; right: 10px;">
+						</div>
+						<h3 class="menu-item__title">Beyond Smash</h3>
+					</div>
+					
+					<div class="menu-item" data-aos="fade-up" data-aos-delay="800">
+						<div class="menu-item__image">
+							<img src="../img/Veggie Cheesy.png" alt="Veggie Cheesy" style="position: relative;">	
+							<img src="../img/icons/vegan.png" alt="Vegan" style="position: absolute; width: 30px; height: 30px; bottom: 10px; right: 10px;">
+						</div>
+						<h3 class="menu-item__title">Veggie Cheesy</h3>
+					</div>
+
+					<div class="menu-item" data-aos="fade-up" data-aos-delay="800">
+						<div class="menu-item__image">
+							<img src="../img/Crispy Chick Wrap.png" alt="Crispy Chick Wrap" style="position: relative;">	
+							<img src="../img/icons/vegan.png" alt="Vegan" style="position: absolute; width: 30px; height: 30px; bottom: 10px; right: 10px;">
+						</div>
+						<h3 class="menu-item__title">Crispy Chick Wrap</h3>
+					</div>
+					<div class="menu-item" data-aos="fade-up" data-aos-delay="800">
+						<div class="menu-item__image">
+							<img src="../img/Keba Wrap.png" alt="Keba Wrap" style="position: relative;">	
+							<img src="../img/icons/vegan.png" alt="Vegan" style="position: absolute; width: 30px; height: 30px; bottom: 10px; right: 10px;">
+						</div>
+						<h3 class="menu-item__title">Kebab Wrap</h3>
+					</div>
+					<div class="menu-item" data-aos="fade-up" data-aos-delay="800">
+						<div class="menu-item__image">
+							<img src="../img/11.png" alt="Nuggets" style="position: relative;">	
+							<img src="../img/icons/vegan.png" alt="Vegan" style="position: absolute; width: 30px; height: 30px; bottom: 10px; right: 10px;">
+						</div>
+						<h3 class="menu-item__title">Nuggets</h3>
+					</div>
+					<div class="menu-item" data-aos="fade-up" data-aos-delay="800">
+						<div class="menu-item__image">
+							<img src="../img/Crunchy Fries.png" alt="Crunchy Fries" style="position: relative;">	
+							<img src="../img/icons/vegan.png" alt="Vegan" style="position: absolute; width: 30px; height: 30px; bottom: 10px; right: 10px;">
+						</div>
+						<h3 class="menu-item__title">Crunchy Fries</h3>
+					</div>
+				</div>
+			</div>
+		</section>
+		<div class="menu-section__more">
+			<button class="menu-section__more-btn" id="showMoreMenu">Mehr anzeigen</button>
+		</div>
+		<!-- menu end -->
+	</div>
+
+
+		<!-- About Us Section -->
+		<section class="about-section" id="about">
+			<div class="about-section__container">
+				<h2 class="about-section__title" data-aos="fade-up">Über uns</h2>
+				<div class="about-section__content" data-aos="fade-up" data-aos-delay="100">
+					<p>Bei Burgie glauben wir daran, dass ein großartiger Burger mehr ist als nur ein Sandwich. Es ist ein Kunstwerk, eine Leidenschaft und ein Versprechen an unsere Kunden.</p>
+					<p>Unsere Geschichte begann mit dem einfachen Wunsch, den perfekten Burger zu kreieren. Heute, nach Jahren der Perfektion, servieren wir handgefertigte Burger aus den frischesten lokalen Zutaten.</p>
+					<p>Jeder Burger wird mit Liebe zubereitet, jede Zutat sorgfältig ausgewählt. Wir setzen auf Nachhaltigkeit, Qualität und den unverwechselbaren Geschmack, der Burgie ausmacht.</p>
+				</div>
+			</div>
+		</section>
+		<div class="container">
+		<!-- Locations Section -->
+		<section class="locations-section" id="standorte">
+			<div class="locations-section__container">
+				<h2 class="locations-section__title" data-aos="fade-up">Unsere Standorte</h2>
+				<div class="locations-section__map" data-aos="fade-up" data-aos-delay="100">
+			
+					<!-- <iframe src=" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+					
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2427.74794755545!2d13.414794899999999!3d52.5199004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84f00690009db%3A0x277d70a31a1554bc!2sBurgie.!5e0!3m2!1sru!2sde!4v1741476879849!5m2!1sru!2sde"" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+				</div>
+				<div class="locations-section__list" data-aos="fade-up" data-aos-delay="200">
+					<div class="location-item">
+						<h3>Burgie Mitte</h3>
+						
+						<p>Alexa Center Berlin,
+							Grunerstraße 20/2. OG, 
+							10179 Berlin</p>
+						<!-- <p>Tel: 030 1234567</p> -->
+					</div>
+					<!-- <div class="location-item">
+						<h3>Burgie Kreuzberg</h3>
+						<p>Oranienstraße 45, 10969 Berlin</p>
+						<p>Tel: 030 7654321</p>
+					</div> -->
+				</div>
+			</div>
+		</section>
+
+		<!-- Reviews Section -->
+		<section class="reviews-section" id="feedback">
+			<div class="reviews-section__container">
+				<h2 class="reviews-section__title" data-aos="fade-up">Bewertungen</h2>
+				<div class="reviews-slider" data-aos="fade-up" data-aos-delay="100">
+					<div class="reviews-slider__container">
+						<div class="reviews-slide">
+							<img src="../img/feedback/1.jpg" alt="Customer Feedback 1">
+						</div>
+						<div class="reviews-slide">
+							<img src="../img/feedback/2.jpg" alt="Customer Feedback 2">
+						</div>
+						<div class="reviews-slide">
+							<img src="../img/feedback/3.jpg" alt="Customer Feedback 3">
+						</div>
+						<div class="reviews-slide">
+							<img src="../img/feedback/4.jpg" alt="Customer Feedback 4">
+						</div>
+						<div class="reviews-slide">
+							<img src="../img/feedback/5.jpg" alt="Customer Feedback 5">
+						</div>
+						<div class="reviews-slide">
+							<img src="../img/feedback/6.jpg" alt="Customer Feedback 6">
+						</div>
+					</div>
+					<div class="reviews-slider__dots"></div>
+				</div>
+
+				
+				<!-- <h2 class="reviews-section__title" data-aos="fade-up">Bewertungen</h2>
+				<div class="reviews-section__grid">
+					<div class="review-item" data-aos="fade-up" data-aos-delay="100">
+						<div class="review-item__stars">★★★★★</div>
+						<p class="review-item__text">"Die besten Burger in Berlin! Das Fleisch ist saftig und die Brötchen sind immer frisch."</p>
+						<p class="review-item__author">- Maria S.</p>
+					</div>
+					<div class="review-item" data-aos="fade-up" data-aos-delay="200">
+						<div class="review-item__stars">★★★★★</div>
+						<p class="review-item__text">"Fantastischer Service und noch besseres Essen. Der Veggie Burger ist ein Traum!"</p>
+						<p class="review-item__author">- Thomas K.</p>
+					</div>
+					<div class="review-item" data-aos="fade-up" data-aos-delay="300">
+						<div class="review-item__stars">★★★★★</div>
+						<p class="review-item__text">"Moderne Atmosphäre, freundliches Personal und köstliche Burger. Was will man mehr?"</p>
+						<p class="review-item__author">- Lisa M.</p>
+					</div>
+				</div> -->
+			</div>
+		</section>
+
+		<!-- Social Media Section -->
+		<section class="social-section">
+			<div class="social-section__container">
+				<h2 class="social-section__title" data-aos="fade-up">Folge uns</h2>
+				<div class="social-section__links" data-aos="fade-up" data-aos-delay="100">
+					<a href="https://www.instagram.com/" class="social-link" target="_blank">
+						
+
+						<img src="../img/icons/instagram.svg" alt="Instagram">
+						<span>Instagram</span>
+					</a>
+					<a href="#" class="social-link">
+						<img src="../img/icons/facebook.svg" alt="Facebook">
+						<span>Facebook</span>
+					</a>
+					<a href="#" class="social-link">
+						<img src="../img/icons/twitter.svg" alt="Twitter">
+						<span>Twitter</span>
+					</a>
+				</div>
+			</div>
+		</section>
+		<!-- Scroll to Top Button -->
+		<button id="scrollToTop" class="scroll-to-top">
+			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M12 4L4 12H9V20H15V12H20L12 4Z" fill="currentColor"/>
+			</svg>
+		</button>
+
+		
+
+		<script>
+			
+		</script>
+
+		<!-- Footer -->
+		<footer class="footer" id="kontakt">
+			<div class="footer__container">
+				<div class="footer__content">
+					<div class="footer__column">
+						<h3>Kontakt</h3>
+						<p>Email: info@burgie.de</p>
+						<p>Tel: 030 1234567</p>
+					</div>
+					<div class="footer__column">
+						<h3>Öffnungszeiten</h3>
+						<p>Mo-Sa: 11:30 - 20:00</p>
+						
+					</div>
+					<div class="footer__column">
+						<h3>Rechtliches</h3>
+						<a href="#">Impressum</a>
+						<a href="#">Datenschutz</a>
+						<a href="#">AGB</a>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<p>&copy; 2025 Burgie. Alle Rechte vorbehalten.</p>
+				</div>
+		</footer>
+		<!-- artem ohii -->
+		</div>
+		
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+		<script>
+			AOS.init({
+				duration: 1000,
+				once: true
+			});
+						// Get all menu links
+						const menuLinks = document.querySelectorAll('.header-nav__a');
+						
+						// Add click handler to each link
+						menuLinks.forEach(link => {
+							link.addEventListener('click', () => {
+								// Remove active class from nav
+								document.getElementById('nav').classList.remove('_active');
+								// Remove overflow class from body and html
+								document.getElementById('body').classList.remove('_overflow');
+								document.getElementById('html').classList.remove('_overflow');
+								// Toggle menu icon
+								document.getElementById('icon-menu').classList.add('_active');
+							});
+						});
+		</script>
+
+		
+		<script src="script.js"></script>
+</body>
+
+</html>
